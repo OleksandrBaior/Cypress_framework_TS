@@ -11,6 +11,6 @@ Web site - [telnyx.com](https://telnyx.com/)
 
 ## 🔑 License
 
-[MIT]('''''''''https://github.com/OleksandrBaior/JS-Playwright-AllureReport?tab=MIT-1-ov-file''''''''')
+[MIT](https://github.com/OleksandrBaior/Cypress_framework_TS?tab=MIT-1-ov-file#)
 
 
