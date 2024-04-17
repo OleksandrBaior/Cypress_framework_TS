@@ -6,8 +6,18 @@
 ## ⚡️ Object for testing
 Web site - [telnyx.com](https://telnyx.com/)
 
-
 ##  📦 Setup
+1. Install [node.js](https://nodejs.org/en/) - JavaScript runtime environment
+2. Clone git repository `git clone https://github.com/OleksandrBaior/Cypress_framework_TS.git`
+3. Install project dependencies specified in the package.json `npm install`
+
+## ⚙️ Running Tests
+
+To open the cypress tool use command:
+
+```
+npx cypress open
+```
 
 ## 🔑 License
 
