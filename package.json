@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "open:cypress": "npx cypress open"
   },
   "author": "Olexandr Baior",
   "license": "ISC",
