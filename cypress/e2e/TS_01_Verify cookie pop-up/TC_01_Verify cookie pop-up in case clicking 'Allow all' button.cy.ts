@@ -15,19 +15,19 @@ describe("TS_01_Verify cookie pop-up", () => {
     cy.go("back");
 
     cookiesPage.elements.cookiesSettingsBtn().click({force: true});
-    cookiesPage.elements.cookiesSettingsModal().should("be.visible", {setTimeout: 10000});
+    cookiesPage.elements.cookiesSettingsModal().should("be.visible");
     cookiesPage.elements.cookiesSettingsCloseBtn().click({force: true});
 
-    cookiesPage.elements.cookieModal().should("be.visible", {setTimeout: 10000});
+    cookiesPage.elements.cookieModal().should("be.visible");
     cookiesPage.elements.cookiesSettingsBtn().click({force: true});
 
     cookiesPage.elements.allowAllBtn().click({force: true});
-    cookiesPage.elements.cookiesSettingsIcon().should("be.visible", {setTimeout: 10000});
+    cookiesPage.elements.cookiesSettingsIcon().should("be.visible");
 
     cookiesPage.elements.cookiesSettingsIcon().click({force: true});
 
-    cookiesPage.elements.performanceCookies().should("be.checked", {setTimeout: 10000});
-    cookiesPage.elements.functionalCookies().should("be.checked", {setTimeout: 10000});
-    cookiesPage.elements.targettingCookies().should("be.checked", {setTimeout: 10000});
+    cookiesPage.elements.performanceCookies().should("be.checked");
+    cookiesPage.elements.functionalCookies().should("be.checked");
+    cookiesPage.elements.targettingCookies().should("be.checked");
   });
 });
