@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "open:cypress": "npx cypress open"
+    "open:cypress": "npx cypress open",
+    "e2e:chrome": "npx cypress run --browser chrome"
   },
   "author": "Olexandr Baior",
   "license": "ISC",

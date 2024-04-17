@@ -18,7 +18,14 @@ To open the cypress tool use command:
 ```
 npx cypress open
 ```
-
+To run test in chome browser
+```
+npx cypress run --browser chrome
+```
+To run the specific spec
+```
+npm run e2e:chrome -- --spec "cypress/e2e/my-spec.cy.js"
+```
 ## 🔑 License
 
 [MIT](https://github.com/OleksandrBaior/Cypress_framework_TS?tab=MIT-1-ov-file#)
