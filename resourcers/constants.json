@@ -1,0 +1,16 @@
+ {
+    "mainPage": {
+        "contactSection": {
+            "tiltleSection": "Sign up",
+            "tiltle":"Connect with us",
+            "subTitile": "Sign up for our marketing newsletter for new products and feature updates, tutorials, and events.",
+            "description": "You can unsubscribe at any time. Read our privacy policy and terms and conditions."
+        }
+    },
+    "emails": {
+        "validEmail": "test@gmail.com",
+        "invalidEmail":"testgmail.com"
+    }
+ }
+
+
