@@ -1,8 +1,10 @@
 /// <reference types="cypress" />
-import cookiesPage from "../../pages/cookies.page";
+import CookiesPage from "../../pages/cookies.page";
 
 describe("TS_01_Verify cookie pop-up", () => {
   it("TC_01_Verify cookie pop-up in case clicking 'Allow all' button", () => {
+    const cookiesPage = new CookiesPage()
+    
     cookiesPage.visit();
     cookiesPage.elements.cookieModal().should("be.visible");
 

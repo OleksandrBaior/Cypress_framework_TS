@@ -1,4 +1,6 @@
-class cookiesPage {
+import MainPage from "./main.page";
+
+class CookiesPage extends MainPage {
   elements = {
     cookieModal: () => cy.get("#onetrust-banner-sdk"),
     readMoreLink: () => cy.get("#onetrust-policy-text > a"),
@@ -11,11 +13,8 @@ class cookiesPage {
     performanceCookies: () => cy.get("#ot-group-id-C0002"),
     functionalCookies: () => cy.get("#ot-group-id-C0003"),
     targettingCookies: () => cy.get("#ot-group-id-C0004"),
+    confirmMyChoiceBtn: () =>cy.get('.save-preference-btn-handler')
   };
-
-  visit() {
-    cy.visit("https://telnyx.com");
-  }
 }
 
-export default new cookiesPage()
+export default CookiesPage

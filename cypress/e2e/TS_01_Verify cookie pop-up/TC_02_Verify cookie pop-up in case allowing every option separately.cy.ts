@@ -1,23 +1,27 @@
 /// <reference types="cypress" />
+import CookiesPage from "../../pages/cookies.page";
 
 describe("TS_01_Verify cookie pop-up", () => {
   it("TC_02_Verify cookie pop-up in case allowing every option separately", () => {
-    cy.visit("https://telnyx.com");
-    cy.get("#onetrust-banner-sdk").should("be.visible");
+    const cookiesPage = new CookiesPage()
 
+    cookiesPage.visit();
+    cookiesPage.elements.cookiesSettingsBtn().click();
 
+    cookiesPage.elements.performanceCookies().check({ force: true });
+    cookiesPage.elements.confirmMyChoiceBtn().click();
 
-    cy.get("#onetrust-pc-btn-handler").click();
-  
+    cookiesPage.elements.cookiesSettingsIcon().click();
+    cookiesPage.elements.performanceCookies().should("be.checked");
+    cookiesPage.elements.functionalCookies().check({ force: true });
+    cookiesPage.elements.confirmMyChoiceBtn().click({ force: true });
 
+    cookiesPage.elements.cookiesSettingsIcon().click();
+    cookiesPage.elements.functionalCookies().should("be.checked");
+    cookiesPage.elements.targettingCookies().check({ force: true });
+    cookiesPage.elements.confirmMyChoiceBtn().click({ force: true });
 
-
-    // cy.get("#accept-recommended-btn-handler").click();
-    // cy.get("[class='ot-floating-button__open']").should("be.visible");
-
-    // cy.get("[class='ot-floating-button__open']").click();
-    // cy.get("#ot-group-id-C0002").should('be.checked');
-    // cy.get("#ot-group-id-C0003").should('be.checked');
-    // cy.get("#ot-group-id-C0004").should('be.checked');
+    cookiesPage.elements.cookiesSettingsIcon().click();
+    cookiesPage.elements.targettingCookies().should("be.checked");
   });
 });
