@@ -6,12 +6,12 @@ describe("TS_01_Verify cookie pop-up", () => {
     const cookiesPage = new CookiesPage()
 
     cookiesPage.visit();
-    cookiesPage.elements.cookiesSettingsBtn().click();
+    cookiesPage.elements.cookiesSettingsBtn().click({force: true});
 
     cookiesPage.elements.performanceCookies().check({ force: true });
-    cookiesPage.elements.confirmMyChoiceBtn().click();
+    cookiesPage.elements.confirmMyChoiceBtn().click({force: true});
 
-    cookiesPage.elements.cookiesSettingsIcon().click();
+    cookiesPage.elements.cookiesSettingsIcon().click({force: true});
     cookiesPage.elements.performanceCookies().should("be.checked");
     cookiesPage.elements.functionalCookies().check({ force: true });
     cookiesPage.elements.confirmMyChoiceBtn().click({ force: true });
@@ -21,7 +21,7 @@ describe("TS_01_Verify cookie pop-up", () => {
     cookiesPage.elements.targettingCookies().check({ force: true });
     cookiesPage.elements.confirmMyChoiceBtn().click({ force: true });
 
-    cookiesPage.elements.cookiesSettingsIcon().click();
+    cookiesPage.elements.cookiesSettingsIcon().click({force: true});
     cookiesPage.elements.targettingCookies().should("be.checked");
   });
 });

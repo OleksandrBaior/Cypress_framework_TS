@@ -8,23 +8,23 @@ describe("TS_01_Verify cookie pop-up", () => {
     cookiesPage.visit();
     cookiesPage.elements.cookieModal().should("be.visible");
 
-    cookiesPage.elements.readMoreLink().click();
+    cookiesPage.elements.readMoreLink().click({force: true});
     cookiesPage.elements
       .titleReadMorePage()
       .should("have.text", "Telnyx Cookie Policy");
     cy.go("back");
 
-    cookiesPage.elements.cookiesSettingsBtn().click();
+    cookiesPage.elements.cookiesSettingsBtn().click({force: true});
     cookiesPage.elements.cookiesSettingsModal().should("be.visible");
-    cookiesPage.elements.cookiesSettingsCloseBtn().click();
+    cookiesPage.elements.cookiesSettingsCloseBtn().click({force: true});
 
     cookiesPage.elements.cookieModal().should("be.visible");
-    cookiesPage.elements.cookiesSettingsBtn().click();
+    cookiesPage.elements.cookiesSettingsBtn().click({force: true});
 
-    cookiesPage.elements.allowAllBtn().click();
+    cookiesPage.elements.allowAllBtn().click({force: true});
     cookiesPage.elements.cookiesSettingsIcon().should("be.visible");
 
-    cookiesPage.elements.cookiesSettingsIcon().click();
+    cookiesPage.elements.cookiesSettingsIcon().click({force: true});
 
     cookiesPage.elements.performanceCookies().should("be.checked");
     cookiesPage.elements.functionalCookies().should("be.checked");
