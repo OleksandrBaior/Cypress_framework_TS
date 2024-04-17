@@ -13,8 +13,9 @@ class CookiesPage extends MainPage {
     performanceCookies: () => cy.get("#ot-group-id-C0002"),
     functionalCookies: () => cy.get("#ot-group-id-C0003"),
     targettingCookies: () => cy.get("#ot-group-id-C0004"),
-    confirmMyChoiceBtn: () =>cy.get('.save-preference-btn-handler')
+    confirmMyChoiceBtn: () => cy.get(".save-preference-btn-handler"),
+    acceptAllBtn: () => cy.get("#onetrust-accept-btn-handler"),
   };
 }
 
-export default CookiesPage
+export default CookiesPage;
