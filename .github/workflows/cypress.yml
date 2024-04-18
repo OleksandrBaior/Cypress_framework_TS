@@ -23,17 +23,16 @@ jobs:
           browser: chrome
         continue-on-error: true
        
-      - name: Generate screenshort artifact 
+      -  name: Screenshots report
         uses: actions/upload-artifact@v4
-        if: failure()
+        # if: failure()
         with:
           name: cypress-screenshots
           path: cypress/screenshots
           if-no-files-found: ignore 
-          
-      - name: Generate video artifact
+        
+      - name: Video report  
         uses: actions/upload-artifact@v4
-        if: failure()
         with:
           name: cypress-videos
           path: cypress/videos
