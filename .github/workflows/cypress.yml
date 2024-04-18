@@ -23,7 +23,7 @@ jobs:
           browser: chrome
         continue-on-error: true
        
-      -  name: Screenshots report
+      - name: Screenshots report
         uses: actions/upload-artifact@v4
         # if: failure()
         with:
