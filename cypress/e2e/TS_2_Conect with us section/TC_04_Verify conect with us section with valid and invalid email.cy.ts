@@ -5,7 +5,6 @@ import endpoints from "../../../resourcers/endpoints.json";
 
 describe("TS_2_Conect with us section", () => {
   it("TC_04_Verify conect with us section with valid and invalid email", () => {
-   
     mainPage.visit();
     mainPage.contactWithUsElements.tiltleSection().scrollIntoView();
 

@@ -3,14 +3,13 @@ import mainPage from "../../pages/main.page";
 
 describe("TS_01_Verify cookie pop-up", () => {
   it("TC_02_Verify cookie pop-up in case allowing every option separately", () => {
-    cy.clearAllCookies();
     mainPage.visit();
-    mainPage.cookiesElements.cookiesSettingsBtn().click({force: true});
+    mainPage.cookiesElements.cookiesSettingsBtn().click({ force: true });
 
     mainPage.cookiesElements.performanceCookies().check({ force: true });
-    mainPage.cookiesElements.confirmMyChoiceBtn().click({force: true});
+    mainPage.cookiesElements.confirmMyChoiceBtn().click({ force: true });
 
-    mainPage.cookiesElements.cookiesSettingsIcon().click({force: true});
+    mainPage.cookiesElements.cookiesSettingsIcon().click({ force: true });
     mainPage.cookiesElements.performanceCookies().should("be.checked");
     mainPage.cookiesElements.functionalCookies().check({ force: true });
     mainPage.cookiesElements.confirmMyChoiceBtn().click({ force: true });
@@ -20,7 +19,7 @@ describe("TS_01_Verify cookie pop-up", () => {
     mainPage.cookiesElements.targettingCookies().check({ force: true });
     mainPage.cookiesElements.confirmMyChoiceBtn().click({ force: true });
 
-    mainPage.cookiesElements.cookiesSettingsIcon().click({force: true});
+    mainPage.cookiesElements.cookiesSettingsIcon().click({ force: true });
     mainPage.cookiesElements.targettingCookies().should("be.checked");
   });
 });

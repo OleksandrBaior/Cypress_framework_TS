@@ -3,8 +3,6 @@ import mainPage from "../../pages/main.page";
 
 describe("TS_01_Verify cookie pop-up", () => {
   it("TC_01_Verify cookie pop-up in case clicking 'Allow all' button", () => {
-    cy.clearAllCookies();
-
     mainPage.visit();
     mainPage.cookiesElements.cookieModal().should("be.visible");
 
