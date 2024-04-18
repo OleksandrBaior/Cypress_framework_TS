@@ -1,7 +1,6 @@
-import MainPage from "./main.page";
 
-class CookiesPage extends MainPage {
-  elements = {
+class basePage {
+  cookiesElements = {
     cookieModal: () => cy.get("#onetrust-banner-sdk"),
     readMoreLink: () => cy.get("#onetrust-policy-text > a"),
     titleReadMorePage: () => cy.get('[class*="c-PJLV c-fGbiyG"]'),
@@ -16,6 +15,11 @@ class CookiesPage extends MainPage {
     confirmMyChoiceBtn: () => cy.get(".save-preference-btn-handler"),
     acceptAllBtn: () => cy.get("#onetrust-accept-btn-handler"),
   };
+
+  visit() {
+    cy.visit("/");
+  }
+  
 }
 
-export default CookiesPage;
+export default basePage;

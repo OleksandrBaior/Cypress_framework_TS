@@ -1,27 +1,26 @@
 /// <reference types="cypress" />
-import CookiesPage from "../../pages/cookies.page";
+import mainPage from "../../pages/main.page";
 
 describe("TS_01_Verify cookie pop-up", () => {
   it("TC_02_Verify cookie pop-up in case allowing every option separately", () => {
-    const cookiesPage = new CookiesPage()
+    cy.clearAllCookies();
+    mainPage.visit();
+    mainPage.cookiesElements.cookiesSettingsBtn().click({force: true});
 
-    cookiesPage.visit();
-    cookiesPage.elements.cookiesSettingsBtn().click({force: true});
+    mainPage.cookiesElements.performanceCookies().check({ force: true });
+    mainPage.cookiesElements.confirmMyChoiceBtn().click({force: true});
 
-    cookiesPage.elements.performanceCookies().check({ force: true });
-    cookiesPage.elements.confirmMyChoiceBtn().click({force: true});
+    mainPage.cookiesElements.cookiesSettingsIcon().click({force: true});
+    mainPage.cookiesElements.performanceCookies().should("be.checked");
+    mainPage.cookiesElements.functionalCookies().check({ force: true });
+    mainPage.cookiesElements.confirmMyChoiceBtn().click({ force: true });
 
-    cookiesPage.elements.cookiesSettingsIcon().click({force: true});
-    cookiesPage.elements.performanceCookies().should("be.checked");
-    cookiesPage.elements.functionalCookies().check({ force: true });
-    cookiesPage.elements.confirmMyChoiceBtn().click({ force: true });
+    mainPage.cookiesElements.cookiesSettingsIcon().click();
+    mainPage.cookiesElements.functionalCookies().should("be.checked");
+    mainPage.cookiesElements.targettingCookies().check({ force: true });
+    mainPage.cookiesElements.confirmMyChoiceBtn().click({ force: true });
 
-    cookiesPage.elements.cookiesSettingsIcon().click();
-    cookiesPage.elements.functionalCookies().should("be.checked");
-    cookiesPage.elements.targettingCookies().check({ force: true });
-    cookiesPage.elements.confirmMyChoiceBtn().click({ force: true });
-
-    cookiesPage.elements.cookiesSettingsIcon().click({force: true});
-    cookiesPage.elements.targettingCookies().should("be.checked");
+    mainPage.cookiesElements.cookiesSettingsIcon().click({force: true});
+    mainPage.cookiesElements.targettingCookies().should("be.checked");
   });
 });

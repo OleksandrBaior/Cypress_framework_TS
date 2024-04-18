@@ -1,4 +1,6 @@
-class MainPage {
+import basePage from "./base.page";
+
+class mainPage extends basePage {
   contactWithUsElements = {
     tiltleSection: () => cy.get('.c-plaCa > .c-gdniMJ > .c-fNZqWL'),
     tiltle: () => cy.get('.c-plaCa > .c-gdniMJ > .c-fKwEGa'),
@@ -8,12 +10,7 @@ class MainPage {
     description: () => cy.get('.c-hRNdXV > .c-deTVua'),
     privacyPolicyLink: () => cy.get('[href="/privacy-policy"] > .c-khZXrc > .c-PJLV'),
     termsAndCondition: () => cy.get('[href="/terms-and-conditions"] > .c-khZXrc > .c-PJLV')
-  
   };
-
-  visit() {
-    cy.visit("/");
-  }
 }
 
-export default MainPage
+export default new mainPage();

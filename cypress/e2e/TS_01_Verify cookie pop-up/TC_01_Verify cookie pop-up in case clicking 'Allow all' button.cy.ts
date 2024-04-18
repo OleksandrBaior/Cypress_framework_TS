@@ -1,33 +1,33 @@
 /// <reference types="cypress" />
-import CookiesPage from "../../pages/cookies.page";
+import mainPage from "../../pages/main.page";
 
 describe("TS_01_Verify cookie pop-up", () => {
   it("TC_01_Verify cookie pop-up in case clicking 'Allow all' button", () => {
-    const cookiesPage = new CookiesPage();
+    cy.clearAllCookies();
 
-    cookiesPage.visit();
-    cookiesPage.elements.cookieModal().should("be.visible");
+    mainPage.visit();
+    mainPage.cookiesElements.cookieModal().should("be.visible");
 
-    cookiesPage.elements.readMoreLink().click({force: true});
-    cookiesPage.elements
+    mainPage.cookiesElements.readMoreLink().click({ force: true });
+    mainPage.cookiesElements
       .titleReadMorePage()
       .should("have.text", "Telnyx Cookie Policy");
     cy.go("back");
 
-    cookiesPage.elements.cookiesSettingsBtn().click({force: true});
-    cookiesPage.elements.cookiesSettingsModal().should("be.visible");
-    cookiesPage.elements.cookiesSettingsCloseBtn().click({force: true});
+    mainPage.cookiesElements.cookiesSettingsBtn().click({ force: true });
+    mainPage.cookiesElements.cookiesSettingsModal().should("be.visible");
+    mainPage.cookiesElements.cookiesSettingsCloseBtn().click({ force: true });
 
-    cookiesPage.elements.cookieModal().should("be.visible");
-    cookiesPage.elements.cookiesSettingsBtn().click({force: true});
+    mainPage.cookiesElements.cookieModal().should("be.visible");
+    mainPage.cookiesElements.cookiesSettingsBtn().click({ force: true });
 
-    cookiesPage.elements.allowAllBtn().click({force: true});
-    cookiesPage.elements.cookiesSettingsIcon().should("be.visible");
+    mainPage.cookiesElements.allowAllBtn().click({ force: true });
+    mainPage.cookiesElements.cookiesSettingsIcon().should("be.visible");
 
-    cookiesPage.elements.cookiesSettingsIcon().click({force: true});
+    mainPage.cookiesElements.cookiesSettingsIcon().click({ force: true });
 
-    cookiesPage.elements.performanceCookies().should("be.checked");
-    cookiesPage.elements.functionalCookies().should("be.checked");
-    cookiesPage.elements.targettingCookies().should("be.checked");
+    mainPage.cookiesElements.performanceCookies().should("be.checked");
+    mainPage.cookiesElements.functionalCookies().should("be.checked");
+    mainPage.cookiesElements.targettingCookies().should("be.checked");
   });
 });

@@ -1,12 +1,11 @@
 /// <reference types="cypress" />
-import MainPage from "../../pages/cookies.page";
+import mainPage from "../../pages/main.page";
 import constants from "../../../resourcers/constants.json";
 import endpoints from "../../../resourcers/endpoints.json";
 
 describe("TS_2_Conect with us section", () => {
   it("TC_04_Verify conect with us section with valid and invalid email", () => {
-    const mainPage = new MainPage();
-
+   
     mainPage.visit();
     mainPage.contactWithUsElements.tiltleSection().scrollIntoView();
 
