@@ -9,7 +9,6 @@ export default defineConfig({
       // implement node event listeners here
     },
     baseUrl: 'https://telnyx.com',
-    reporter: 'list'
   },
 
 });
