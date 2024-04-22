@@ -27,5 +27,5 @@ export default defineConfig({
     },
     baseUrl: "https://telnyx.com",  
     video: true 
-  },
+  }
 });

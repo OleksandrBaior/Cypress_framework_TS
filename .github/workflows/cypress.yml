@@ -14,10 +14,6 @@ jobs:
     runs-on: ubuntu-22.04
     name: E2E on Chrome
     steps:
-      - name: Set locale
-        run: export LC_ALL=pl_PL.UTF-8
-        shell: bash
-
       - name: Checkout
         uses: actions/checkout@v4
         
@@ -41,4 +37,4 @@ jobs:
           path: cypress/videos
           if-no-files-found: ignore 
 env:
-      TZ: 'Europe/Warsaw'
+    TZ: America/New_York
