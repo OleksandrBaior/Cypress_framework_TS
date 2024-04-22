@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-22.04
     name: E2E on Chrome
     steps:
-        - name: Cleanup
+      - name: Cleanup
         run: |
           gh extension install actions/gh-actions-cache
 
@@ -36,25 +36,25 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@v4
-        
+          
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
           browser: chrome
-        continue-on-error: true
-        env:
-          TZ: America/New_York
-       
+          continue-on-error: true
+          env:
+            TZ: America/New_York
+        
       - name: Screenshots report
         uses: actions/upload-artifact@v4
         with:
-          name: cypress-screenshots
-          path: cypress/screenshots
-          if-no-files-found: ignore 
-        
+            name: cypress-screenshots
+            path: cypress/screenshots
+            if-no-files-found: ignore 
+          
       - name: Video report  
         uses: actions/upload-artifact@v4
         with:
-          name: cypress-videos
-          path: cypress/videos
-          if-no-files-found: ignore 
+            name: cypress-videos
+            path: cypress/videos
+            if-no-files-found: ignore 
