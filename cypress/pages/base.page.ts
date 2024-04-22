@@ -7,7 +7,6 @@ class basePage {
     cookiesSettingsBtn: () => cy.get("#onetrust-pc-btn-handler"),
     cookiesSettingsModal: () => cy.get("#onetrust-pc-sdk > div"),
     cookiesSettingsCloseBtn: () => cy.get("#close-pc-btn-handler"),
-    cookiesSettingsIcon: () => cy.get("[class='ot-floating-button__open']"),
     allowAllBtn: () => cy.get("#accept-recommended-btn-handler"),
     performanceCookies: () => cy.get("#ot-group-id-C0002"),
     functionalCookies: () => cy.get("#ot-group-id-C0003"),
