@@ -11,11 +11,13 @@ it("TC_01_Verify cookie pop-up in case clicking 'Allow all' button", () => {
     .should("have.text", "Telnyx Cookie Policy");
   cy.go("back");
 
+  cy.wait(4000)
   mainPage.cookiesElements.cookiesSettingsBtn().click({ force: true });
   mainPage.cookiesElements.cookiesSettingsModal().should("be.visible");
   mainPage.cookiesElements.cookiesSettingsCloseBtn().click({ force: true });
 
   mainPage.cookiesElements.cookieModal().should("be.visible");
+  
   mainPage.cookiesElements.cookiesSettingsBtn().click({ force: true });
 
   // mainPage.cookiesElements.allowAllBtn().click({ force: true });
