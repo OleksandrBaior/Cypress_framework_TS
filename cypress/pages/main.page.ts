@@ -2,8 +2,8 @@ import basePage from "./base.page";
 
 class mainPage extends basePage {
   navigationBar = {
-    // productsBtn: () => cy.get('[id*="radix-:Rkljm:"]'),
-    productsBtn: () => cy.contains('Products'),
+    // navBar: () =>  cy.get('[class="c-buvHyO c-buvHyO-igBHaYk-css c-dFcuQt"]'),
+    productsBtn: () => cy.get('[id*="radix-:Rkljm:"]'),
     productsModal: () => cy.get(".c-inDTpq"),
     solutionBtn: () => cy.get(".c-buvHyO-igBHaYk-css > .c-fSFmQG > a.c-ewUecD"),
     pricingBtn: () => cy.get("#radix-:Rlljm: > .c-ewUecD > .c-khZXrc > .c-PJLV"),
