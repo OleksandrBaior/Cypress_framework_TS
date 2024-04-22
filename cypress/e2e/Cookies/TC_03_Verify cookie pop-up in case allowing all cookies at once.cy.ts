@@ -6,5 +6,5 @@ it("TC_03_Verify cookie pop-up in case allowing all cookies at once", () => {
   mainPage.visit();
   mainPage.cookiesElements.acceptAllBtn().click();
   mainPage.cookiesElements.cookieModal().should("not.visible");
-  cy.getCookies().should("have.length", 7);
+  cy.getCookies().should("have.length", 21);
 });
