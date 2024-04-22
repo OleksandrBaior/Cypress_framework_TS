@@ -4,9 +4,10 @@ import mainPage from "../../pages/main.page";
 it("TC_02_Verify cookie pop-up in case allowing every option separately", () => {
   mainPage.visit();
   cy.clearAllCookies()
+  
   mainPage.cookiesElements.cookiesSettingsBtn().click({ force: true });
 
-  
+
   mainPage.cookiesElements.performanceCookies().check({ force: true });
   mainPage.cookiesElements.confirmMyChoiceBtn().click({ force: true });
 
