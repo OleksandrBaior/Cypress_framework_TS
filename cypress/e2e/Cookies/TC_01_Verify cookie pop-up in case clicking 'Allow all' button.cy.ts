@@ -21,6 +21,9 @@ it("TC_01_Verify cookie pop-up in case clicking 'Allow all' button", () => {
   mainPage.cookiesElements.cookiesSettingsBtn().click({ force: true });
 
   mainPage.cookiesElements.allowAllBtn().click({ force: true });
+
+
+  cy.wait(5000)
   mainPage.cookiesElements.cookiesSettingsIcon().should("be.visible");
 
   mainPage.cookiesElements.cookiesSettingsIcon().click({ force: true });
