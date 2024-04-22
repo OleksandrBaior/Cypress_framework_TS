@@ -6,6 +6,7 @@ it("TC_02_Verify cookie pop-up in case allowing every option separately", () => 
   cy.clearAllCookies()
   mainPage.cookiesElements.cookiesSettingsBtn().click({ force: true });
 
+  
   mainPage.cookiesElements.performanceCookies().check({ force: true });
   mainPage.cookiesElements.confirmMyChoiceBtn().click({ force: true });
 
