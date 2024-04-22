@@ -14,6 +14,7 @@ class basePage {
     targettingCookies: () => cy.get("#ot-group-id-C0004"),
     confirmMyChoiceBtn: () => cy.get(".save-preference-btn-handler"),
     acceptAllBtn: () => cy.get("#onetrust-accept-btn-handler"),
+    closeBtn: () => cy.get('.onetrust-close-btn-handler')
   };
 
   visit() {

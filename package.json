@@ -10,7 +10,7 @@
   "author": "Olexandr Baior",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^13.7.3",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "cypress": "^13.8.0"
   }
 }

@@ -10,6 +10,13 @@
     "emails": {
         "validEmail": "test@gmail.com",
         "invalidEmail":"testgmail.com"
+    },
+
+    "shopPage": {
+        "shoppingCart": {
+            "emptyText": "Your cart is empty"
+        }
+            
     }
  }
 
