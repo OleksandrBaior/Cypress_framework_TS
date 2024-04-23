@@ -1,12 +1,10 @@
 import { defineConfig } from "cypress";
-import fs from "fs";
 
 export default defineConfig({
-  //macbook-16
-  viewportWidth: 1536,
-  viewportHeight: 960,
-
   e2e: {
+    //macbook-16
+    viewportWidth: 1536,
+    viewportHeight: 960,
     setupNodeEvents(on, config) {
       // implement node event listeners here
       // on(
@@ -25,7 +23,7 @@ export default defineConfig({
       //   }
       // )
     },
-    baseUrl: "https://telnyx.com",  
-    video: true 
-  }
+    baseUrl: "https://telnyx.com",
+    video: true,
+  },
 });

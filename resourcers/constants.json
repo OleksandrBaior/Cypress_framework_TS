@@ -15,8 +15,14 @@
     "shopPage": {
         "shoppingCart": {
             "emptyText": "Your cart is empty"
-        }
-            
+        }    
+    },
+
+    "styleFiels": {
+        "border": "1px solid rgb(235, 0, 0)",
+        "borderColor": "rgb(235, 0, 0)",
+        "error": "This field is required."
+
     }
  }
 

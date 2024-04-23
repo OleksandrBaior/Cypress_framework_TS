@@ -10,7 +10,10 @@
   "author": "Olexandr Baior",
   "license": "ISC",
   "dependencies": {
-    "typescript": "^5.4.5",
-    "cypress": "^13.8.0"
+    "cypress": "^13.8.0",
+    "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1"
   }
 }
