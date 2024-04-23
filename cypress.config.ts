@@ -1,8 +1,8 @@
-import { defineConfig } from "cypress";
+import cypress, { defineConfig } from "cypress";
 
 export default defineConfig({
   retries: {
-    runMode: 2,
+    runMode: process.env.CI ? 1 : 1 ,
     openMode: 0,
   },
   e2e: {
@@ -29,5 +29,9 @@ export default defineConfig({
     },
     baseUrl: "https://telnyx.com",
     video: true,
+
+    defaultCommandTimeout: 5000,
+    execTimeout: 80000
   },
+  
 });
