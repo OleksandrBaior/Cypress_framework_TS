@@ -25,7 +25,8 @@ jobs:
           browser: chrome
         continue-on-error: true
         env:
-          TZ: America/New_York
+          TZ: Europe/Warsaw
+          CYPRESS_ENV: Poland
        
       - name: Screenshots report
         uses: actions/upload-artifact@v4

@@ -13,7 +13,7 @@ export default defineConfig({
         resultsDir: "./reportAllure/allure-results",
       });
 
-      // implement node event listeners here
+  
       // on(
       //   'after:spec',
       //   (spec: Cypress.Spec, results: CypressCommandLine.RunResult) => {
@@ -28,7 +28,7 @@ export default defineConfig({
       //       }
       //     }
       //   }
-      // )zz
+      // )
     },
    
     viewportWidth: 1536,
