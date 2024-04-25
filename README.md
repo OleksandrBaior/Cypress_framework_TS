@@ -51,6 +51,10 @@ To open allure report:
 ```
 npm run open:HTMLallure
 ```
+## 🌏 Link of Allure report on CI 
+
+[https://oleksandrbaior.github.io/Cypress_framework_TS/index.html](https://oleksandrbaior.github.io/Cypress_framework_TS/index.html) 
+
 ## 🔑 License
 
 [MIT](https://github.com/OleksandrBaior/Cypress_framework_TS?tab=MIT-1-ov-file#)
