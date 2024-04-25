@@ -2,18 +2,12 @@ import basePage from "./base.page";
 
 class mainPage extends basePage {
   navigationBar = {
-    // navBar: () =>  cy.get('[class="c-buvHyO c-buvHyO-igBHaYk-css c-dFcuQt"]'),
     productsBtn: () => cy.get('[id*="radix-:Rkljm:"]'),
-    productsModal: () => cy.get(".c-inDTpq"),
-    solutionBtn: () => cy.get(".c-buvHyO-igBHaYk-css > .c-fSFmQG > a.c-ewUecD"),
-    pricingBtn: () => cy.get("#radix-:Rlljm: > .c-ewUecD > .c-khZXrc > .c-PJLV"),
-    pricingModal: () => cy.get(".c-inDTpq"),
-    whyTelnuxBtn: () => cy.get('#radix-\:Rm5jm\: > .c-ewUecD'),
-    whyTelnuxModal: () => cy.get('.c-inDTpq'),
-    resoursesBtn: () => cy.get('#radix-\:Rmljm\: > .c-ewUecD'),
-    resoursesModal: () => cy.get('.c-inDTpq'),
-    developersBtn: () => cy.get('#radix-\:Rn5jm\:'),
-    developersModal: () => cy.get('.c-inDTpq')
+    solutionBtn: () => cy.get('nav > a[href="/solutions"').first(),
+    pricingBtn: () => cy.get('[id*="radix-:Rlljm:"]'),
+    whyTelnuxBtn: () => cy.get('[id*="radix-:Rm5jm:"]'),
+    resoursesBtn: () => cy.get('[id*="radix-:Rmljm:"]'),
+    developersBtn: () => cy.get('[id*="radix-:Rn5jm:"]'),
   };
 
   contactWithUsElements = {

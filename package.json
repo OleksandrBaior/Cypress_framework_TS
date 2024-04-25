@@ -5,15 +5,19 @@
   "main": "index.js",
   "scripts": {
     "open:cypress": "npx cypress open",
-    "e2e:chrome": "npx cypress run --browser chrome"
+    "e2e:chrome": "npx cypress run --browser chrome",
+    "e2e:edge": "npx cypress run --browser edge",
+    "e2e:electron": "npx cypress run --browser electron",
+    "generate:allure": "allure generate --clean -o reportAllure/allure-report reportAllure/allure-results",
+    "open:HTMLallure": "allure open reportAllure/allure-report"
   },
   "author": "Olexandr Baior",
   "license": "ISC",
+  
   "dependencies": {
     "cypress": "^13.8.0",
-    "typescript": "^5.4.5"
-  },
-  "devDependencies": {
-    "@faker-js/faker": "^8.4.1"
+    "typescript": "^5.4.5",
+    "@faker-js/faker": "^8.4.1",
+    "allure-cypress": "^2.15.1"
   }
 }
