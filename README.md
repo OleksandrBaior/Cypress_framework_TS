@@ -16,15 +16,40 @@ Web site - [telnyx.com](https://telnyx.com/)
 To open the cypress tool use command:
 
 ```
-npx cypress open
+npm run open:cypress
 ```
-To run test in chome browser
+To run test in chrome browser:
 ```
-npx cypress run --browser chrome
+npm run e2e:chrome
 ```
-To run the specific spec
+To run test in edge browser:
+```
+npm run e2e:edge
+```
+To run test in electron browser:
+```
+npm run e2e:electron
+```
+To run the specific spec:
 ```
 npm run e2e:chrome -- --spec "cypress/e2e/my-spec.cy.js"
+```
+
+## 📜 Allure Report
+
+For reporting used Allure Report - Automation Test Reporting Tool  
+Learn more about Allure Report at [Allure](https://allurereport.org/)
+
+To generate allure report:
+
+```
+npm run generate:allure
+```
+
+To open allure report:
+
+```
+npm run open:HTMLallure
 ```
 ## 🔑 License
 
