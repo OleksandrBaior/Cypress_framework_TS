@@ -7,10 +7,7 @@ export default defineConfig({
     openMode: 0,
   },
   e2e: {
-    //macbook-16
-    viewportWidth: 1536,
-    viewportHeight: 960,
-
+  
     setupNodeEvents(on, config) {
       allureCypress(on, {
         resultsDir: "./reportAllure/allure-results",
@@ -31,8 +28,11 @@ export default defineConfig({
       //       }
       //     }
       //   }
-      // )
+      // )zz
     },
+   
+    viewportWidth: 1536,
+    viewportHeight: 960,
 
     baseUrl: "https://telnyx.com",
     video: true,

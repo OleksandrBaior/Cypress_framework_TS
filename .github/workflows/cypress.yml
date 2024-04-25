@@ -11,6 +11,7 @@ on:
 
 jobs:
   test:
+    timeout-minutes: 60
     runs-on: ubuntu-22.04
     name: E2E on Chrome
     steps:
@@ -39,3 +40,27 @@ jobs:
           name: cypress-videos
           path: cypress/videos
           if-no-files-found: ignore 
+
+      - name: Get Allure history
+        uses: actions/checkout@v2
+        if: always()
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Allure Report action from marketplace
+        uses: simple-elf/allure-report-action@master
+        if: always()
+        with:
+          allure_results: reports/allure-results
+          allure_history: reports/allure-history
+          keep_reports: 10
+
+      - name: Deploy report to Github Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v2
+        env:
+          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: reports/allure-history
