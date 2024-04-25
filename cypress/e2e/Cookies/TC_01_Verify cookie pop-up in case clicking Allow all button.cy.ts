@@ -32,8 +32,8 @@ it("TC_01_Verify cookie pop-up in case clicking Allow all button", () => {
     mainPage.cookiesElements.cookiesSettingsModal().should("be.visible");
   });
   allure.step("Click on allow all button", () => {
-    mainPage.cookiesElements.allowAllBtn().should("be.visible");
-    mainPage.cookiesElements.allowAllBtn().click({ force: true });
+    mainPage.cookiesElements.confirmMyChoiceBtn().should("be.visible");
+    mainPage.cookiesElements.confirmMyChoiceBtn().click({ force: true });
   })
   allure.step("Verify that cookies modal does not appaer", () => {
     mainPage.cookiesElements.cookieModal().should("not.be.visible");
