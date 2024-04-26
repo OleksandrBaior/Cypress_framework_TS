@@ -16,6 +16,6 @@ it("TC_04_Verify connect with us section with valid and invalid email", () => {
   mainPage.contactWithUsElements.emailInput().type(constants.emails.validEmail);
   mainPage.contactWithUsElements.emailInput().focus();
   mainPage.contactWithUsElements.emailInput().should("have.css", "border", constants.styleFiels.greenBorder);
-
+  mainPage.contactWithUsElements.submitBtn().click();
   cy.url().should("eq", endpoints.createAccount);
 });
