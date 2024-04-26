@@ -7,9 +7,7 @@
     "open:cypress": "npx cypress open",
     "e2e:chrome": "npx cypress run --record --key 377f94db-bf94-4417-b9b9-6ca2af55be11 --browser chrome",
     "e2e:edge": "npx cypress run --record --key 377f94db-bf94-4417-b9b9-6ca2af55be11> --browser edge",
-    "e2e:electron": "npx cypress run --record --key 377f94db-bf94-4417-b9b9-6ca2af55be11 --browser electron",
-    "generate:allure": "allure generate --clean -o reportAllure/allure-report reportAllure/allure-results",
-    "open:HTMLallure": "allure open reportAllure/allure-report"
+    "e2e:electron": "npx cypress run --record --key 377f94db-bf94-4417-b9b9-6ca2af55be11 --browser electron"
   },
   "author": "Olexandr Baior",
   "license": "ISC",
