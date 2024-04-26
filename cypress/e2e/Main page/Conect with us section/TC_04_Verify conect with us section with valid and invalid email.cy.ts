@@ -4,9 +4,9 @@ import constants from "../../../../resourcers/constants.json";
 import endpoints from "../../../../resourcers/endpoints.json";
 import * as allure from "allure-cypress";
 
-it("TC_04_Verify contact with us section with valid and invalid email", () => {
-  allure.feature("Main page");
-  allure.story("Contact with us");
+it("TC_04_Verify connect with us section with valid and invalid email", () => {
+  allure.epic("Main page");
+  allure.feature("Connect with us");
 
   allure.step("Open the main page", () => {
     mainPage.visit();

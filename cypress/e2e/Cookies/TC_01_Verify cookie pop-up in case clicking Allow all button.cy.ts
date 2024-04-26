@@ -3,7 +3,7 @@ import mainPage from "../../pages/main.page";
 import * as allure from "allure-cypress";
 
 it("TC_01_Verify cookie pop-up in case clicking Allow all button", () => {
-  allure.feature("Cookie");
+  allure.feature("Cookie"); 
 
   allure.step("Open the main page", () => {
     mainPage.visit();

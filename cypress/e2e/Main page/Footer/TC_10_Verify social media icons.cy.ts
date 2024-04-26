@@ -4,7 +4,8 @@ import endpoints from "../../../../resourcers/endpoints.json";
 import * as allure from "allure-cypress";
 
 it("TC_10_Verify social media icon", () => {
-  allure.feature("Main page");
+  allure.epic("Main page");
+  allure.feature("Footer");
 
   allure.step("Open the contact us page", () => {
     mainPage.visit();

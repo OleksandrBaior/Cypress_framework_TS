@@ -3,9 +3,9 @@ import contactUs from "../../../pages/contactUs.page";
 import * as allure from "allure-cypress";
 
 it("TC_08_Verify the contact us form with valid data", () => {
-  allure.feature("Main page");
-  allure.story("Contact with us");
-  
+  allure.epic("Main page");
+  allure.feature("Connect with us");
+
   allure.step("Open the contact us page", () => {
     contactUs.visit();
     contactUs.form.title().should("be.visible");
@@ -51,6 +51,7 @@ it("TC_08_Verify the contact us form with valid data", () => {
     contactUs.form.submitBtn().should("have.text", "Please Wait");
   });
   allure.step("Verify that success tiile is visible", () => {
+    cy.wait(5000)
     contactUs.form.successTitle().should("be.visible");
   });  
 });

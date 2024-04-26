@@ -3,7 +3,8 @@ import mainPage from "../../../pages/main.page";
 import * as allure from "allure-cypress";
 
 it("TC_06_Verify the navigation bar", () => {
-  allure.feature("Main page");
+  allure.epic("Main page");
+  allure.feature("Header");
 
   allure.step("Open the main page", () => {
     mainPage.visit();
