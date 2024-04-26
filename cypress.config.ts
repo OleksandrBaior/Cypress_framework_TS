@@ -1,5 +1,4 @@
 import cypress, { defineConfig } from "cypress";
-const { allureCypress } = require("allure-cypress/reporter");
 import fs from "fs";
 
 export default defineConfig({
@@ -12,10 +11,7 @@ export default defineConfig({
   },
   e2e: {
     setupNodeEvents(on, config) {
-      allureCypress(on, {
-        resultsDir: "./reportAllure/allure-results",
-      });
-
+    
       // on(
       //   "after:spec",
       //   (spec: Cypress.Spec, results: CypressCommandLine.RunResult) => {
