@@ -35,26 +35,6 @@ To run the specific spec:
 npm run e2e:chrome -- --spec "cypress/e2e/my-spec.cy.js"
 ```
 
-## 📜 Allure Report
-
-For reporting used Allure Report - Automation Test Reporting Tool  
-Learn more about Allure Report at [Allure](https://allurereport.org/)
-
-To generate allure report:
-
-```
-npm run generate:allure
-```
-
-To open allure report:
-
-```
-npm run open:HTMLallure
-```
-## 🌏 Link of Allure report on CI 
-
-[https://oleksandrbaior.github.io/Cypress_framework_TS/index.html](https://oleksandrbaior.github.io/Cypress_framework_TS/index.html) 
-
 ## 🔑 License
 
 [MIT](https://github.com/OleksandrBaior/Cypress_framework_TS?tab=MIT-1-ov-file#)
