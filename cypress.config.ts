@@ -3,6 +3,9 @@ const { allureCypress } = require("allure-cypress/reporter");
 import fs from "fs";
 
 export default defineConfig({
+  chromeWebSecurity: false,
+  experimentalModifyObstructiveThirdPartyCode: true,
+
   retries: {
     runMode: process.env.CI ? 1 : 1,
     openMode: 0,

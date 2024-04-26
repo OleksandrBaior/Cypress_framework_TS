@@ -4,6 +4,7 @@ import * as allure from "allure-cypress";
 
 it("TC_08_Verify the contact us form with valid data", () => {
   allure.feature("Main page");
+  allure.story("Contact with us");
   
   allure.step("Open the contact us page", () => {
     contactUs.visit();

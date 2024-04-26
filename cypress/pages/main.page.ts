@@ -20,6 +20,13 @@ class mainPage extends basePage {
     privacyPolicyLink: () => cy.get('[href="/privacy-policy"] > .c-khZXrc > .c-PJLV'),
     termsAndCondition: () => cy.get('[href="/terms-and-conditions"] > .c-khZXrc > .c-PJLV'),
   };
-}
 
+  footerSection = {
+    footer: () => cy.get("#__next footer"),
+    imageFooter: () => cy.get('footer > div > div > a > svg'),
+    linkedIn: () => cy.get('[class="c-ejcPbY"] a').eq(0),
+    twitter: () => cy.get('[class="c-ejcPbY"] a').eq(1),
+    facebook: () => cy.get('[class="c-ejcPbY"] a').eq(2)
+  }
+}
 export default new mainPage();

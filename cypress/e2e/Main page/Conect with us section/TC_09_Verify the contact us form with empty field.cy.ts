@@ -5,6 +5,7 @@ import * as allure from "allure-cypress";
 
 it("TC_09_Verify the contact us form with empty field", () => {
   allure.feature("Main page");
+  allure.story("Contact with us");
   
   allure.step("Open the contact us page", () => {
     contactUs.visit();

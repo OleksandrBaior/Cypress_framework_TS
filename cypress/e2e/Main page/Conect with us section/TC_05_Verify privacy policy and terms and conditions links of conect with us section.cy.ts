@@ -5,6 +5,7 @@ import * as allure from "allure-cypress";
 
 it("TC_05_Verify privacy policy and terms and conditions links of conect with us section", () => {
   allure.feature("Main page");
+  allure.story("Contact with us");
   
   allure.step("Open the main page", () => {
     mainPage.visit();
