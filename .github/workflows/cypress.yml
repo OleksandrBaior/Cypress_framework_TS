@@ -11,37 +11,15 @@ on:
   
 jobs:
 
-
-  install:
-    runs-on: ubuntu-latest
-    name: Install
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Cypress install
-        uses: cypress-io/github-action@v6
-        with:
-          runTests: false
-          build: npm run build
-
-      - name: Save build folder
-        uses: actions/upload-artifact@v4
-        with:
-          name: build
-          if-no-files-found: error
-          path: dist
-
-
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     name: E2E on Chrome
 
-    strategy:
-      fail-fast: false 
-      matrix:
-        containers: [1, 2, 3, 4, 5]
+    # strategy:
+    #   fail-fast: false 
+    #   matrix:
+    #     containers: [1, 2, 3, 4, 5]
 
     steps:
       - name: Checkout
@@ -50,7 +28,6 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          working-directory: cypress
           browser: chrome
           record: true
           parallel: true 
