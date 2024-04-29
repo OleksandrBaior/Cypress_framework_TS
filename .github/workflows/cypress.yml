@@ -29,22 +29,11 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           browser: chrome
-          record: true
-          parallel: true 
-          group: 'UI-Chrome'
-          start: npm start
         env:
           TZ: Europe/Warsaw
           CYPRESS_ENV: Poland
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Save build folder
-        uses: actions/upload-artifact@v4
-        with:
-          name: build
-          if-no-files-found: error
-          path: dist
 
       - name: Screenshots report
         uses: actions/upload-artifact@v4
