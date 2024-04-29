@@ -16,10 +16,10 @@ jobs:
     runs-on: ubuntu-latest
     name: E2E on Chrome
 
-    # strategy:
-    #   fail-fast: false 
-    #   matrix:
-    #     containers: [1, 2, 3, 4, 5]
+    strategy:
+      fail-fast: false 
+      matrix:
+        containers: [1, 2, 3, 4, 5]
 
     steps:
       - name: Checkout
@@ -29,6 +29,8 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           browser: chrome
+          record: true
+          parallel: true 
         env:
           TZ: Europe/Warsaw
           CYPRESS_ENV: Poland
