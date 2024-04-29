@@ -10,6 +10,28 @@ on:
     branches: [master]
   
 jobs:
+
+
+  install:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Cypress install
+        uses: cypress-io/github-action@v6
+        with:
+          runTests: false
+          build: npm run build
+
+      - name: Save build folder
+        uses: actions/upload-artifact@v4
+        with:
+          name: build
+          if-no-files-found: error
+          path: dist
+
+
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
@@ -28,28 +50,23 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           browser: chrome
-          start: npm start
           record: true
           parallel: true 
           group: 'UI-Chrome'
+          start: npm start
         env:
           TZ: Europe/Warsaw
           CYPRESS_ENV: Poland
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # - name: Checkout
-        # uses: actions/checkout@v4
-        
-      # - name: Cypress run
-        # uses: cypress-io/github-action@v6
-        # with:
-          # browser: chrome
-        # continue-on-error: true
-        # env:
-          # TZ: Europe/Warsaw
-          # CYPRESS_ENV: Poland
-       
+      - name: Save build folder
+        uses: actions/upload-artifact@v4
+        with:
+          name: build
+          if-no-files-found: error
+          path: dist
+
       - name: Screenshots report
         uses: actions/upload-artifact@v4
         with:
