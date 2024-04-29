@@ -32,6 +32,7 @@ jobs:
           record: true
           parallel: true 
         env:
+          group: 'UI-Chrome'
           TZ: Europe/Warsaw
           CYPRESS_ENV: Poland
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
