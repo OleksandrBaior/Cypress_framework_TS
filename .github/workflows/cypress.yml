@@ -13,7 +13,8 @@ jobs:
 
 
   install:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
+    name: Install
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -49,6 +50,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
+          working-directory: cypress
           browser: chrome
           record: true
           parallel: true 
