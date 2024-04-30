@@ -4,13 +4,14 @@ import fs from "fs";
 export default defineConfig({
   projectId: '7wmxm7',
   chromeWebSecurity: false,
-
+  
   retries: {
-    runMode: process.env.CI ? 1 : 1,
+    runMode: process.env.CI ? 1 : 0,
     openMode: 0,
   },
   e2e: {
     setupNodeEvents(on, config) {
+      
       on(
         "after:spec",
         (spec: Cypress.Spec, results: CypressCommandLine.RunResult) => {
@@ -37,4 +38,5 @@ export default defineConfig({
     defaultCommandTimeout: 5000,
     execTimeout: 80000,
   },
+  
 });
