@@ -15,8 +15,9 @@ class ShopPage extends BasePage {
   }
 
   visit() {
-    super.visit(endpoints.shop);
+    cy.visit(endpoints.shop);
   }
+
 }
 
 export default new ShopPage();
