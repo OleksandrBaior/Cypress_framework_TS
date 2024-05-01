@@ -1,6 +1,6 @@
-import basePage from "./base.page";
+import BasePage from "./base.page";
 
-class mainPage extends basePage {
+class MainPage extends BasePage {
   navigationBar = {
     productsBtn: () => cy.get('[id*="radix-:Rkljm:"]'),
     solutionBtn: () => cy.get('nav > a[href="/solutions"').first(),
@@ -29,4 +29,4 @@ class mainPage extends basePage {
     facebook: () => cy.get('[class="c-ejcPbY"] a').eq(2)
   }
 }
-export default new mainPage();
+export default new MainPage();

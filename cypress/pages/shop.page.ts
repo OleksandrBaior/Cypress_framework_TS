@@ -1,7 +1,7 @@
-import basePage from "./base.page";
+import BasePage from "./base.page";
 import endpoints from "../../resourcers/endpoints.json";
 
-class shopPage extends basePage {
+class ShopPage extends BasePage {
   homeTab = {
     featuredProducts: () => cy.get('[class*="color-background"]'),
     firstItem: () => cy.get('[class*="color-background"] button').first()
@@ -12,14 +12,11 @@ class shopPage extends basePage {
     deleteItemIcon: () => cy.get('#CartDrawer-Remove-1 button'),
     emptyText: () => cy.get('[class="cart__empty-text"]'),
     continueShoppingBtn: () => cy.get('#CartDrawer a'), 
-    
-
-    
   }
 
   visit() {
-    cy.visit(endpoints.shop);
+    super.visit(endpoints.shop);
   }
 }
 
-export default new shopPage();
+export default new ShopPage();
