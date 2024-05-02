@@ -3,6 +3,6 @@ import baseConfig from "./cypress.config"
 
 export default defineConfig({
   ...baseConfig,
-  viewportWidth: 1920,
-  viewportHeight: 1080 ,
+  viewportWidth: 1440,
+  viewportHeight: 900 ,
 });

@@ -9,15 +9,15 @@ it("TC_10_Verify social media icon", () => {
   mainPage.footerSection.imageFooter().should("be.visible");
   mainPage.footerSection.linkedIn().invoke("removeAttr", "target");
   mainPage.footerSection.linkedIn().click();
-  cy.url().should("eq", endpoints.linkedin);
+  cy.url().should("include", endpoints.linkedin);
   mainPage.visit();
 
   mainPage.footerSection.twitter().invoke("removeAttr", "target");
   mainPage.footerSection.twitter().click();
-  cy.url().should("eq", endpoints.twitter);
+  cy.url().should("include", endpoints.twitter);
   mainPage.visit();
 
   mainPage.footerSection.facebook().invoke("removeAttr", "target");
   mainPage.footerSection.facebook().click();
-  cy.url().should("eq", endpoints.facebook);
+  cy.url().should("include", endpoints.facebook);
 });

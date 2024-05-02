@@ -1,4 +1,5 @@
-import cypress, { defineConfig } from "cypress";
+import { defineConfig } from "cypress";
+import endpoints from "./resourcers/endpoints.json"
 import fs from "fs";
 
 export default defineConfig({
@@ -9,6 +10,10 @@ export default defineConfig({
     runMode: process.env.CI ? 1 : 0,
     openMode: 0,
   },
+
+  viewportWidth: 1536,
+  viewportHeight: 960,
+  
   e2e: {
     setupNodeEvents(on, config) {
       
@@ -27,10 +32,7 @@ export default defineConfig({
       );
     },
 
-    viewportWidth: 1536,
-    viewportHeight: 960,
-
-    baseUrl: "https://telnyx.com",
+    baseUrl: endpoints.baseUrl,
     video: true,
     screenshotsFolder: "cypress/screenshots",
     screenshotOnRunFailure: true,

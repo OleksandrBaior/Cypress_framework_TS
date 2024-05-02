@@ -1,31 +1,22 @@
 import { faker } from "@faker-js/faker";
 
 class RandomUtils {
-    randomFirstName() {
+  rundomValue(value = "") {
+    switch (value) {
+      case "firstName":
         return faker.person.firstName();
-      }
-      randomLastName() {
+      case "middleName":
         return faker.person.middleName();
-      }
-      randomEmail() {
+      case "email":
         return faker.internet.email();
-      }
-      randomPhooneNumber(){
-        return faker.string.numeric(7)
-      }
-      randomText(){
-        return faker.lorem.word(5)
-      }
+      case "phoneNumber":
+        return faker.string.numeric(7);
+      case "text":
+        return faker.lorem.word(5);
+      default:
+        break;
+    }
+  }
 }
-  
+
 export default new RandomUtils();
-  
-  
-  
-  
-  
-  
-  
-  
-  
- 

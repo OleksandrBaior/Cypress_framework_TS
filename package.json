@@ -10,9 +10,9 @@
     "e2e:edge:Macbook16": "npx cypress run --record --key 377f94db-bf94-4417-b9b9-6ca2af55be11> --browser edge",
     "e2e:electron:Macbook16": "npx cypress run --record --key 377f94db-bf94-4417-b9b9-6ca2af55be11 --browser electron",
 
-    "e2e:chrome:Macbook15": "npx cypress run --record --key 377f94db-bf94-4417-b9b9-6ca2af55be11 --config-file cypress.mackbook-15.config.ts --browser chrome",
-    "e2e:edge:Macbook15": "npx cypress run --record --key 377f94db-bf94-4417-b9b9-6ca2af55be11 --config-file cypress.mackbook-15.config.ts --browser edge",
-    "e2e:electron:Macbook15": "npx cypress run --record --key 377f94db-bf94-4417-b9b9-6ca2af55be11 --config-file cypress.mackbook-15.config.ts --browser eelectrondge",
+    "e2e:chrome:Macbook15": "npx cypress run --record --key 377f94db-bf94-4417-b9b9-6ca2af55be11 --config-file cypress.mackbook15.config.ts --browser chrome",
+    "e2e:edge:Macbook15": "npx cypress run --record --key 377f94db-bf94-4417-b9b9-6ca2af55be11 --config-file cypress.mackbook15.config.ts --browser edge",
+    "e2e:electron:Macbook15": "npx cypress run --record --key 377f94db-bf94-4417-b9b9-6ca2af55be11 --config-file cypress.mackbook15.config.ts --browser eelectrondge",
 
     "e2e:chrome:lenovo": "npx cypress run --record --key 377f94db-bf94-4417-b9b9-6ca2af55be11 --config-file cypress.lenovo.config.ts --browser chrome",
     "e2e:edge:lenovo": "npx cypress run --record --key 377f94db-bf94-4417-b9b9-6ca2af55be11 --config-file cypress.lenovo.config.ts --browser edge",

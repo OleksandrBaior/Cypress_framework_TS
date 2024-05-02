@@ -7,22 +7,19 @@ it("TC_08_Verify the contact us form with valid data", () => {
 
   contactUs.form.title().should("be.visible");
   contactUs.form.howCanWeHelp().select("Sales-Inquiry");
-  contactUs.form.firstName().type(randomUtils.randomFirstName());
-  contactUs.form.lastName().type(randomUtils.randomLastName());
-  contactUs.form.email().type(randomUtils.randomEmail());
+  contactUs.form.firstName().type(randomUtils.rundomValue("firstName"));
+  contactUs.form.lastName().type(randomUtils.rundomValue("middleName"));
+  contactUs.form.email().type(randomUtils.rundomValue("email"));
   contactUs.form.country().select("+380");
-  contactUs.form.phoneNumber().type(randomUtils.randomPhooneNumber());
-  contactUs.form.companyWebsite().type(randomUtils.randomText());
+  contactUs.form.phoneNumber().type(randomUtils.rundomValue("phoneNumber"));
+  contactUs.form.companyWebsite().type(randomUtils.rundomValue("text"));
   contactUs.form.primaryInterest().select("AI / Inference");
   contactUs.form.budget().select("$500 - $1000");
-  contactUs.form.howDoYouPlan().type(randomUtils.randomText());
-  contactUs.form.howDidYouHearAboutTelnyx().type(randomUtils.randomText());
+  contactUs.form.howDoYouPlan().type(randomUtils.rundomValue("text"));
+  contactUs.form.howDidYouHearAboutTelnyx().type(randomUtils.rundomValue("text"));
   contactUs.form.subscriptionCheckbox().check();
   contactUs.form.submitBtn().click();
   contactUs.form.submitBtn().should("have.text", "Please Wait");
-  cy.wait(5000);
+
   contactUs.form.successTitle().should("be.visible");
-
-
-  
 });
