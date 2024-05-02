@@ -11,7 +11,7 @@ export default defineConfig({
     openMode: 0,
   },
 
-  viewportWidth: 1439,
+  viewportWidth: 1536,
   viewportHeight: 960,
   
   e2e: {
