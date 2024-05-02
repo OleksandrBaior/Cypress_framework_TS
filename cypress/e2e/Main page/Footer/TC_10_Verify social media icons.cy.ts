@@ -19,5 +19,10 @@ it("TC_10_Verify social media icon", () => {
 
   mainPage.footerSection.facebook().invoke("removeAttr", "target");
   mainPage.footerSection.facebook().click();
-  cy.url().should("include", endpoints.facebook || endpoints.facebookCI);
+
+  try {
+    cy.url().should("include", endpoints.facebook);
+  } catch (error) {
+    cy.url().should("include", endpoints.facebookCI);
+  }
 });
