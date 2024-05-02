@@ -19,5 +19,5 @@ it("TC_10_Verify social media icon", () => {
 
   mainPage.footerSection.facebook().invoke("removeAttr", "target");
   mainPage.footerSection.facebook().click();
-  cy.url().should("include", endpoints.facebook);
+  cy.url().should("include", endpoints.facebook || endpoints.facebookCI);
 });

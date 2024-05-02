@@ -8,5 +8,6 @@
     "contactUs": "/contact-us",
     "linkedin": "https://www.linkedin.com/company/telnyx/",
     "twitter": "https://twitter.com/i/flow/login?redirect_after_login=%2Ftelnyx",
-    "facebook": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2FTelnyx%2F"
+    "facebook": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2FTelnyx%2F",
+    "facebookCI": "https://www.facebook.com/login/Telnyx"
 }
