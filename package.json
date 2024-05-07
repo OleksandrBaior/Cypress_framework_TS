@@ -13,7 +13,8 @@
         "e2e:electron:Macbook15": "npx cypress run --record --key 377f94db-bf94-4417-b9b9-6ca2af55be11 --config-file config/cypress.mackbook15.config.ts --browser electron",
         "e2e:chrome:lenovo": "npx cypress run --record --key 377f94db-bf94-4417-b9b9-6ca2af55be11 --config-file configs/cypress.lenovo.config.ts --browser chrome",
         "e2e:edge:lenovo": "npx cypress run --record --key 377f94db-bf94-4417-b9b9-6ca2af55be11 --config-file configs/cypress.lenovo.config.ts --browser edge",
-        "e2e:electron:lenovo": "npx cypress run --record --key 377f94db-bf94-4417-b9b9-6ca2af55be11 --config-file configs/cypress.lenovo.config.ts --browser electron"
+        "e2e:electron:lenovo": "npx cypress run --record --key 377f94db-bf94-4417-b9b9-6ca2af55be11 --config-file configs/cypress.lenovo.config.ts --browser electron",
+        "format:allFilesPrettier" : "npx prettier . --write"
     },
     "author": "Olexandr Baior",
     "license": "ISC",
