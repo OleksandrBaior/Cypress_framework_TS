@@ -4,9 +4,11 @@
 </div>
 
 ## ⚡️ Object for testing
+
 Web site - [telnyx.com](https://telnyx.com/)
 
-##  📦 Setup
+## 📦 Setup
+
 1. Install [node.js](https://nodejs.org/en/) - JavaScript runtime environment
 2. Clone git repository `git clone https://github.com/OleksandrBaior/Cypress_framework_TS.git`
 3. Install project dependencies specified in the package.json `npm install`
@@ -18,22 +20,31 @@ To open the cypress tool use command:
 ```
 npm run open:cypress
 ```
+
 To run test in chrome browser:
+
 ```
 npm run e2e:chrome:Macbook16
 ```
+
 To run test in edge browser:
+
 ```
 npm run e2e:edge:Macbook16
 ```
+
 To run test in electron browser:
+
 ```
 npm run e2e:electron:Macbook16
 ```
+
 To run the specific spec:
+
 ```
 e2e:chrome:Macbook16 -- --spec "cypress/e2e/my-spec.cy.ts"
 ```
+
 ## 📝 Cloud cypress report
 
 Learn more about Cypress Cloud at - [Documentation](https://docs.cypress.io/guides/overview/why-cypress)
@@ -43,5 +54,3 @@ To open cloud cypress report - [Cloud reports](https://cloud.cypress.io/projects
 ## 🔑 License
 
 [MIT](https://github.com/OleksandrBaior/Cypress_framework_TS?tab=MIT-1-ov-file#)
-
-
