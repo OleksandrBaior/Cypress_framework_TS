@@ -14,15 +14,23 @@
         "e2e:chrome:lenovo": "npx cypress run --record --key 377f94db-bf94-4417-b9b9-6ca2af55be11 --config-file configs/cypress.lenovo.config.ts --browser chrome",
         "e2e:edge:lenovo": "npx cypress run --record --key 377f94db-bf94-4417-b9b9-6ca2af55be11 --config-file configs/cypress.lenovo.config.ts --browser edge",
         "e2e:electron:lenovo": "npx cypress run --record --key 377f94db-bf94-4417-b9b9-6ca2af55be11 --config-file configs/cypress.lenovo.config.ts --browser electron",
-        "format:allFilesPrettier" : "npx prettier . --write"
+        "format:allFilesPrettier": "npx prettier . --write",
+        "prepare": "husky"
     },
     "author": "Olexandr Baior",
     "license": "ISC",
     "dependencies": {
         "@faker-js/faker": "^8.4.1",
         "cypress": "^13.8.0",
-        "typescript": "^5.4.5",
         "eslint-plugin-cypress": "^3.0.3",
-        "prettier": "3.2.5"
+        "prettier": "3.2.5",
+        "typescript": "^5.4.5"
+    },
+    "devDependencies": {
+        "husky": "^9.0.11",
+        "lint-staged": "^15.2.2"
+    },
+    "lint-staged": {
+        "**/*": "prettier --write --ignore-unknown"
     }
 }
