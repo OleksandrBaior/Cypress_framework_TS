@@ -13,9 +13,9 @@ export default class BasePage {
         confirmMyChoiceBtn: () => cy.get('.save-preference-btn-handler'),
         acceptAllBtn: () => cy.get('#onetrust-accept-btn-handler'),
         closeBtn: () => cy.get('.onetrust-close-btn-handler'),
-    }
+    };
 
     visit(path = '') {
-        cy.visit(`/${path}`)
+        cy.visit(`/${path}`);
     }
 }

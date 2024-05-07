@@ -1,5 +1,5 @@
-import BasePage from './base.page'
-import endpoints from '../../resourcers/endpoints.json'
+import BasePage from './base.page';
+import endpoints from '../../resourcers/endpoints.json';
 
 class ContactUs extends BasePage {
     form = {
@@ -19,11 +19,11 @@ class ContactUs extends BasePage {
         howDoYouPlan: () => cy.get('#Form_Additional_Information__c'),
         successTitle: () => cy.contains('Thank you.'),
         errorMsg: '#ValidMsgReason_for_Contact__c',
-    }
+    };
 
     visit() {
-        super.visit(endpoints.contactUs)
+        super.visit(endpoints.contactUs);
     }
 }
 
-export default new ContactUs()
+export default new ContactUs();

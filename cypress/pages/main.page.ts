@@ -1,4 +1,4 @@
-import BasePage from './base.page'
+import BasePage from './base.page';
 
 class MainPage extends BasePage {
     navigationBar = {
@@ -8,7 +8,7 @@ class MainPage extends BasePage {
         whyTelnuxBtn: () => cy.get('[id*="radix-:Rm5jm:"]'),
         resoursesBtn: () => cy.get('[id*="radix-:Rmljm:"]'),
         developersBtn: () => cy.get('[id*="radix-:Rn5jm:"]'),
-    }
+    };
 
     contactWithUsElements = {
         tiltleSection: () => cy.get('.c-plaCa > .c-gdniMJ > .c-fNZqWL'),
@@ -19,7 +19,7 @@ class MainPage extends BasePage {
         description: () => cy.get('.c-hRNdXV > .c-deTVua'),
         privacyPolicyLink: () => cy.get('[href="/privacy-policy"] > .c-khZXrc > .c-PJLV'),
         termsAndCondition: () => cy.get('[href="/terms-and-conditions"] > .c-khZXrc > .c-PJLV'),
-    }
+    };
 
     footerSection = {
         footer: () => cy.get('#__next footer'),
@@ -27,6 +27,6 @@ class MainPage extends BasePage {
         linkedIn: () => cy.get('[class="c-ejcPbY"] a').eq(0),
         twitter: () => cy.get('[class="c-ejcPbY"] a').eq(1),
         facebook: () => cy.get('[class="c-ejcPbY"] a').eq(2),
-    }
+    };
 }
-export default new MainPage()
+export default new MainPage();
